@@ -1,12 +1,14 @@
-# Sandra Otubushin - ML 04 Regression Project
+# Sandra Otubushin – ML 04 Regression Project
 
 [![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
-> Professional Python project completed by **Sandra Otubushin** for learning and evaluating regression models.
+> Professional Python project completed by **Sandra Otubushin** using regression models to predict Titanic passenger fares.
 
-## Author
+---
+
+# Author
 
 **Sandra Otubushin**
 
@@ -15,71 +17,114 @@
 
 ---
 
-## Project Description
+# Project Description
 
-This project demonstrates how to build, train, and evaluate regression models that predict continuous numerical values. Throughout this project, I explored regression techniques, interpreted model performance metrics, and compared different regression models to better understand how machine learning can be used to solve prediction problems.
+This project applies supervised machine learning regression techniques to predict the **fare** paid by Titanic passengers. Several regression models were trained and compared using different combinations of input features to determine which model produced the most accurate predictions.
 
-The project includes:
+The project demonstrates:
 
-- Training and evaluating regression models
-- Learning regression evaluation metrics such as MAE, RMSE, and R²
-- Interpreting model coefficients
-- Comparing regression models to determine the best-performing approach
-- Creating visualizations to better understand the data
+- Data exploration and preparation
+- Feature engineering
+- Linear Regression
+- Ridge Regression
+- Elastic Net Regression
+- Polynomial Regression
+- Model evaluation using MAE, RMSE, and R²
+- Comparison of regression model performance
 
-## Example Notebook + My Notebook
+---
 
-The original example notebook is included for reference.
+# Project Notebook
 
-My analysis will be completed in my own notebook while keeping the example notebook unchanged.
+### My Regression Notebook
 
-Example notebook:
+- [ml04_sandra_otubushin.ipynb](notebooks/project04/ml04_sandra_otubushin.ipynb)
+
+### Example Notebook
 
 - [ml_04_case.ipynb](notebooks/ml_04_case.ipynb)
 
 ---
 
-## Working Files
+# Working Files
 
 This project uses the following folders:
 
-- **data/raw** – stores raw datasets used for analysis.
-- **docs/** – contains project documentation and supporting materials.
-- **src/mlstudio/** – contains the example application used to verify the environment.
-- **notebooks/** – contains interactive notebooks used for regression analysis.
-- **pyproject.toml** – stores project configuration and dependencies.
-- **zensical.toml** – stores documentation and project metadata.
+- **data/raw/** – stores the source datasets.
+- **docs/** – contains project documentation and narrative.
+- **src/mlstudio/** – contains the example regression application.
+- **notebooks/** – contains interactive notebooks for regression analysis.
+- **pyproject.toml** – project configuration and dependencies.
+- **zensical.toml** – documentation and project metadata.
 
 ---
 
-## Findings and Visualizations
+# My Project Summary
 
-The example generated the following visualizations:
+For my custom project, I predicted **Titanic passenger fares** using regression models.
 
-### Figure 1
+The following feature combinations were evaluated:
 
-![Hours Studied vs Score](./docs/images/Figure_1.png)
+- Age
+- Family Size
+- Age + Family Size
+- Age + Family Size + Sex
 
-This scatter plot illustrates the positive relationship between hours studied and student scores.
+The best-performing linear regression model used:
 
-### Figure 2
+- Age
+- Family Size
+- Sex
 
-![Model Coefficients](./docs/images/Figure_2.png)
-
-This chart displays the coefficients learned by the regression model. The results indicate that **hours studied** has the greatest influence on the predicted score, while the remaining variables contribute less to the prediction.
+Additional models including Ridge Regression, Elastic Net, and Polynomial Regression were compared to evaluate model performance and reduce the possibility of overfitting.
 
 ---
 
-## Project Documentation
+# Findings and Visualizations
 
-Additional documentation is available in:
+### Figure 1 – Regression Analysis
+
+![Regression Analysis](./docs/images/Figure_1.png)
+
+This visualization illustrates the relationship between the selected input features and the predicted passenger fares.
+
+---
+
+### Figure 2 – Model Coefficients
+
+![Regression Model Coefficients](./docs/images/Figure_2.png)
+
+This chart displays the learned coefficients from the regression model. It illustrates the relative influence of each feature on the predicted fare.
+
+---
+
+# Results
+
+The project demonstrated that using multiple input features produced better predictions than using a single feature.
+
+Key observations included:
+
+- Age alone was a weak predictor of fare.
+- Combining multiple features improved model performance.
+- Ridge Regression and Elastic Net produced similar results while helping reduce overfitting.
+- Model performance was evaluated using **MAE**, **RMSE**, and **R²**.
+
+---
+
+# Documentation
+
+Additional project documentation is available in:
 
 - [docs/index.md](docs/index.md)
 
-## Citation
+---
+
+# Citation
 
 [CITATION.cff](./CITATION.cff)
 
-## License
+---
+
+# License
 
 [MIT](./LICENSE)
