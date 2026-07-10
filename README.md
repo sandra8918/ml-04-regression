@@ -1,198 +1,80 @@
-# ml-04-regression
+# Sandra Otubushin - ML 04 Regression Project
 
 [![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
-> Professional Python project: building and evaluating regression models.
+> Professional Python project completed by **Sandra Otubushin** for learning and evaluating regression models.
+
+## Author
+
+**Sandra Otubushin**
+
+- GitHub Repository: https://github.com/sandra8918/ml-04-regression
+- GitHub Pages: https://sandra8918.github.io/ml-04-regression/
+
+---
 
 ## Project Description
 
-This project focuses on learning to build models that predict a number.
+This project demonstrates how to build, train, and evaluate regression models that predict continuous numerical values. Throughout this project, I explored regression techniques, interpreted model performance metrics, and compared different regression models to better understand how machine learning can be used to solve prediction problems.
 
-We learn to:
+The project includes:
 
-- train and evaluate a regression model
-  (e.g., linear regression, decision tree regressor)
-- read regression metrics: MAE, RMSE, R^2
-- interpret what the model learned
-- compare models and choose the better one
+- Training and evaluating regression models
+- Learning regression evaluation metrics such as MAE, RMSE, and R²
+- Interpreting model coefficients
+- Comparing regression models to determine the best-performing approach
+- Creating visualizations to better understand the data
 
-## Example Notebook + Your Notebook
+## Example Notebook + My Notebook
 
-Keep the example notebook as it is.
-Either copy it or use it to build a new notebook that ends in _yourname.
-See [docs/your-files.md] for more.
+The original example notebook is included for reference.
 
-Links:
+My analysis will be completed in my own notebook while keeping the example notebook unchanged.
+
+Example notebook:
 
 - [ml_04_case.ipynb](notebooks/ml_04_case.ipynb)
 
+---
+
 ## Working Files
 
-You'll work with these areas:
+This project uses the following folders:
 
-- **data/raw** - raw data for exploration (only if you add a dataset)
-- **docs/** - project narrative and documentation
-- **src/mlstudio/** - the app is an example; run only (no need to modify)
-- **notebooks/** - interactive analysis
-- **pyproject.toml** - update authorship & links
-- **zensical.toml** - update authorship & links
+- **data/raw** – stores raw datasets used for analysis.
+- **docs/** – contains project documentation and supporting materials.
+- **src/mlstudio/** – contains the example application used to verify the environment.
+- **notebooks/** – contains interactive notebooks used for regression analysis.
+- **pyproject.toml** – stores project configuration and dependencies.
+- **zensical.toml** – stores documentation and project metadata.
 
-## Instructions (pro-analytics-02)
+---
 
-Follow the
-[step-by-step workflow guide](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
-to complete:
+## Findings and Visualizations
 
-1. Phase 1. **Start & Run**
-2. Phase 2. **Change Authorship**
-3. Phase 3. **Read & Understand**
-4. Phase 4. **Modify**
-5. Phase 5. **Apply**
+The example generated the following visualizations:
 
-## Challenges
+### Figure 1
 
-Challenges are expected.
-Sometimes instructions may not quite match your operating system.
-When issues occur, share screenshots, error messages, and details about what you tried.
-Working through issues is part of implementing professional projects.
+![Hours Studied vs Score](./docs/images/Figure_1.png)
 
-## Success
+This scatter plot illustrates the positive relationship between hours studied and student scores.
 
-After completing Phase 1. **Start & Run**, you'll have your own GitHub project,
-with the example notebook executed and committed,
-and running the example module will print out:
+### Figure 2
 
-```shell
-========================
-Executed successfully!
-========================
-```
+![Model Coefficients](./docs/images/Figure_2.png)
 
-A new file `project.log` will appear in the root project folder.
+This chart displays the coefficients learned by the regression model. The results indicate that **hours studied** has the greatest influence on the predicted score, while the remaining variables contribute less to the prediction.
 
-## Command Reference
-
-<details>
-<summary>Show command reference</summary>
-
-### In a machine terminal (open in your `Repos` folder)
-
-After you get a copy of this repo in your own GitHub account,
-open a machine terminal in your `Repos` folder:
-
-```shell
-# Replace username with YOUR GitHub username.
-git clone https://github.com/username/ml-04-regression
-
-cd ml-04-regression
-code .
-```
-
-### In a VS Code terminal
-
-These are listed for convenience.
-For best results, follow the detailed instructions in
-[pro-analytics-02 guide](https://denisecase.github.io/pro-analytics-02/).
-
-```shell
-uv self update
-uv python pin 3.14
-uv lock --upgrade
-uv sync --extra dev --extra docs --upgrade
-
-uvx pre-commit install
-uvx pre-commit autoupdate
-
-git add -A
-uvx pre-commit run --all-files
-# repeat if changes were made
-uvx pre-commit run --all-files
-
-# run the example module to verify the environment (.venv/)
-uv run python -m mlstudio.app_case
-
-# run common chores
-uv run ruff format .
-uv run ruff check . --fix
-uv run python -m pyright
-uv run python -m pytest
-uv run python -m zensical build
-
-# save progress
-git add -A
-git commit -m "update"
-git push -u origin main
-```
-
-</details>
-
-## Notes
-
-- Use the **UP ARROW** and **DOWN ARROW** in the terminal to scroll through past commands.
-- Use `CTRL+f` to find (and replace) text within a file.
-- You do not need to add to or modify `tests/`. They are provided for example only.
-- Many files are silent helpers. Explore as you like, but nothing is required.
-- You do NOT need to understand everything; understanding builds naturally over time.
-
-## Troubleshooting >>>
-
-If you see something like this in your terminal: `>>>` or `...`
-You accidentally started Python interactive mode.
-It happens.
-Press `Ctrl+c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
-
-## Example Output (Can Remove this Section after You Verify)
-
-```shell
-| INFO | ML | Summarize workflow........
-| INFO | ML | ========================
-| INFO | ML | SUMMARY
-| INFO | ML | ========================
-| INFO | ML | Dataset: hours_scores_case
-| INFO | ML | Original rows: 10
-| INFO | ML | Clean rows: 10
-| INFO | ML | Features: ['hours_studied', 'practice_quizzes', 'attendance_pct', 'sleep_hours', 'prior_score']
-| INFO | ML | Target: score
-| INFO | ML | ----- in a script, call plt.show() once at the end to display all charts -----
-| INFO | ML | ----- in a script, CLOSE the chart windows with the close button to CONTINUE -----
-| INFO | ML | Workflow complete
-| INFO | ML | IMPORTANT: This script creates chart windows.
-| INFO | ML | Close chart windows and terminate this process with CTRL+c as needed.
-| INFO | ML | ========================
-| INFO | ML | Executed successfully!
-| INFO | ML | ========================
-```
-
-## Findings and Visuals
-
-Take screenshots of your charts and provide them here with a discussion.
-In Markdown, display a figure by using:
-an exclamation mark immediately followed by square brackets containing a useful caption
-immediately followed by parentheses containing the relative path to your figure.
-Note: When you start typing the path with a dot (.) for "here, in this directory",
-the IDE may help complete the path.
-
-In your custom project, follow this example, but
-
-- your figures and narrative should reflect your work,
-- this `README.md` should include your commands, process, and visuals, and
-- `docs/index.md` should include your narrative.
-
-Remove unnecessary instructional comments in your custom files.
-
-Update figures to present interesting results from your custom project:
-
-![Provide a Useful Caption](./docs/images/Figure_1.png)
-
-![Provide a Useful Caption](./docs/images/Figure_2.png)
+---
 
 ## Project Documentation
 
-Additional project instructions, terms, and notes:
+Additional documentation is available in:
 
-[docs/index.md](docs/index.md)
+- [docs/index.md](docs/index.md)
 
 ## Citation
 

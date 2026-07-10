@@ -1,25 +1,20 @@
 # ============================================================
 # zensical.toml (ALL-COURSE-PY-SRC-REPOS)
 # ============================================================
-# Updated: 2026-06-27
-#
-# REQ: Python src/ repositories SHOULD provide documentation configuration.
-# WHY: Centralizes project documentation configuration.
 
 [project]
-site_name = "Docs" # CUSTOM: Set the name that appears in the browser tab.
-site_url = "https://denisecase.github.io/ml-04-regression/"
-repo_url = "https://github.com/denisecase/ml-04-regression"
+site_name = "Sandra Otubushin - Regression Project"
+site_url = "https://sandra8918.github.io/ml-04-regression/"
+repo_url = "https://github.com/sandra8918/ml-04-regression"
 repo_name = "ml-04-regression"
-site_description = "Project Documentation" # CUSTOM: Set the description.
-docs_dir = "docs" # source directory for documentation markdown files
-site_dir = "site" # output directory for generated site (ignored by Git; not in repo)
-edit_uri = "edit/main/docs/" # "Edit this page" links (GitHub)
+site_description = "Regression Analysis Project Documentation"
+docs_dir = "docs"
+site_dir = "site"
+edit_uri = "edit/main/docs/"
 
 [project.extra]
-# WHY: Social links provide easy access to project repositories and profiles.
 social = [
-    {icon = "fontawesome/brands/github", link = "https://github.com/denisecase/ml-04-regression" },
+    { icon = "fontawesome/brands/github", link = "https://github.com/sandra8918/ml-04-regression" },
 ]
 
 # ------------------------------------------------------------
@@ -27,33 +22,27 @@ social = [
 # ------------------------------------------------------------
 
 [project.plugins.search]
-lang = "en" # WHY: Search plugin provides instant search functionality for documentation.
+lang = "en"
 
 [project.plugins.mkdocstrings.handlers.python]
-paths = ["src"] # WHY: MkDocstrings auto-generates documentation from code; this points it to the source code directory.
+paths = ["src"]
 
 [project.plugins.mkdocstrings.handlers.python.options]
-docstring_style = "google" # WHY: Google style docstrings are widely used and supported by many tools.
-show_source = true # WHY: Showing source code can help users understand implementation details.
+docstring_style = "google"
+show_source = true
 show_root_heading = true
 show_root_toc_entry = true
 show_signature_annotations = true
 separate_signature = true
 
 [project.theme]
-# SEE: https://zensical.org/docs/setup/navigation/#instant-navigation-zensicaltoml
 features = [
-    "navigation.tracking", # WHY: Track documentation navigation behavior.
-    "navigation.expand", # WHY: Expandable navigation helps users focus on relevant sections.
-    "navigation.path", # WHY: Path navigation helps users understand location.
-    "navigation.prune", # WHY: Pruning simplifies navigation.
-    "navigation.indexes", # WHY: Indexes provide an overview of documentation structure.
-    "toc.follow", # WHY: Keep table of contents in sync with the current page.
-    "toc.integrate", # WHY: Integrate table of contents into navigation.
-    "navigation.top", # WHY: Add a back-to-top button.
+    "navigation.tracking",
+    "navigation.expand",
+    "navigation.path",
+    "navigation.prune",
+    "navigation.indexes",
+    "toc.follow",
+    "toc.integrate",
+    "navigation.top",
 ]
-
-# ------------------------------------------------------------
-# Navigation
-# ------------------------------------------------------------
-# Use folder-based navigation rather than explicit navigation.
